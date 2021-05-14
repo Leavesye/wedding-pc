@@ -147,6 +147,17 @@
     }
   }
 }
+.tags {
+  list-style-type: none;
+  display: flex;
+  font-size: 12px;
+  width: 1110px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.tags li {
+  margin-right: 20px;
+}
 </style>
 <template>
   <div class="footer">
@@ -228,7 +239,9 @@
         </div>
       </div>
     </div>
-    <div style="color:#4a4a4a; font-size: 12px;text-align:center;margin-top: 30px;">提供： 三亚婚礼、旅行结婚、旅行婚礼、教堂婚礼、海岛婚礼、新疆/丽江/大理/西双版纳/三亚婚礼策划公司</div>
+    <ul class="tags">
+      <li v-for="(item, i) in tags" :key="i">{{item}}</li>
+    </ul>
     <div class="file">
       <div>
         <a href="https://beian.miit.gov.cn" target="icp" rel="nofollow">沪ICP备18041883号-1</a>  © 2020 Watabe Wedding Corporation. All Rights
@@ -245,7 +258,8 @@
 export default {
   data() {
     return {
-      active: 0
+      active: 0,
+      tags: ['旅行结婚','旅行婚礼','海外婚礼','教堂婚礼','三亚婚礼','海岛婚礼','海外婚庆公司','冲绳婚庆公司','目的地婚礼策划'],
     }
   },
   methods: {
