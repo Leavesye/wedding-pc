@@ -228,7 +228,7 @@
         </div>
       </div>
     </div>
-    <div style="color:red; font-size: 12px;text-align:center;margin-top: 30px;">提供： 三亚婚礼、旅行结婚、旅行婚礼、教堂婚礼、海岛婚礼、新疆/丽江/大理/西双版纳/三亚婚礼策划公司</div>
+    <div style="color:#4a4a4a; font-size: 12px;text-align:center;margin-top: 30px;">提供： 三亚婚礼、旅行结婚、旅行婚礼、教堂婚礼、海岛婚礼、新疆/丽江/大理/西双版纳/三亚婚礼策划公司</div>
     <div class="file">
       <div>
         <a href="https://beian.miit.gov.cn" target="icp" rel="nofollow">沪ICP备18041883号-1</a>  © 2020 Watabe Wedding Corporation. All Rights
