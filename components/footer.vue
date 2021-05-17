@@ -245,7 +245,7 @@
     <div class="file">
       <div>
         <a href="https://beian.miit.gov.cn" target="icp" rel="nofollow">沪ICP备18041883号-1</a>  © 2020 Watabe Wedding Corporation. All Rights
-        Reserved.  华德培婚纱(上海)有限公司
+        Reserved.  <a href="/">华德培婚纱(上海)有限公司</a>
       </div>
       <div>
         <img src="~assets/img/jinghui.png" alt />
