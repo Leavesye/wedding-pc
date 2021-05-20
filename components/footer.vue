@@ -1,6 +1,6 @@
 <style lang="scss" scoped>
 .footer {
-  height: 330px;
+  height: 350px;
   width: 100%;
   min-width: 1280px;
   // box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
@@ -158,6 +158,18 @@
 .tags li {
   margin-right: 20px;
 }
+.f-link {
+  display: flex;
+  width: 1110px;
+  font-size: 12px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.f-link ul {
+  list-style-type: none;
+  display: flex;
+}
+
 </style>
 <template>
   <div class="footer">
@@ -242,6 +254,12 @@
     <ul class="tags">
       <li v-for="(item, i) in tags" :key="i">{{item}}</li>
     </ul>
+    <!-- <div class="f-link">
+      <div>友情链接：</div>
+      <ul>
+        <li v-for="(item, i) in flinks" :key="i"><a style="color:#4a4a4a" :href="item.link" :alt="item.alt">{{item.text}}{{ i == flinks.length-1 ? "" :'•'}} </a></li>
+      </ul>
+    </div> -->
     <div class="file">
       <div>
         <a href="https://beian.miit.gov.cn" target="icp" rel="nofollow">沪ICP备18041883号-1</a>  © 2020 Watabe Wedding Corporation. All Rights
@@ -260,6 +278,11 @@ export default {
     return {
       active: 0,
       tags: ['旅行结婚','旅行婚礼','海外婚礼','教堂婚礼','三亚婚礼','海岛婚礼','海外婚庆公司','冲绳婚庆公司','目的地婚礼策划'],
+    }
+  },
+  computed: {
+    flinks: function() {
+      return this.$store.state.links
     }
   },
   methods: {

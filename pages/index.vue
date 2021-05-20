@@ -563,6 +563,12 @@ export default {
       res = await context.$axios.get(
         `/resource/watabe/production/single/China/5e4a4da2b5c1951d163ead96/5e4a4da2b5c1951d163ead96`
       )
+      context.store.commit('SAVE_LINK', res.data[0].fLinks)
+      // context.store.commit('SAVE_LINK', [
+      //   { text: '旅行结婚', link: 'www.baidu.com', alt: 'fdkhfjhd' },
+      //   { text: '旅行结婚', link: 'www.baidu.com', alt: 'fdkhfjhd' },
+      //   { text: '旅行结婚', link: 'www.baidu.com', alt: 'fdkhfjhd' },
+      // ])
     }
     let obj = res.data[0]
     return {

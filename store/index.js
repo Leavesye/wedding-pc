@@ -6,7 +6,8 @@ const store = () => new Vuex.Store({
     state: {
         baseUrl: "https://www.watabe-wedding.com.cn",
         menu: {},
-        token: ""
+        token: "",
+        links: ''
     },
     mutations: {
         SAVE_MENU(state, data) {
@@ -14,6 +15,9 @@ const store = () => new Vuex.Store({
         },
         save_token(state, data) {
             state.token = data
+        },
+        SAVE_LINK(state, data) {
+            state.links = data
         }
     }
 })
