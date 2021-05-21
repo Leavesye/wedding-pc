@@ -366,6 +366,8 @@ export default {
     }
   },
   async created() {
+    let ret = await this.$axios.get(`/fLinks`)
+    this.$store.commit('SAVE_LINK', ret)
     let res = await this.$axios.get(`/menu/watabe/list/China`)
     this.$store.commit(`SAVE_MENU`, res.data)
     this.list = res.data.filter(v => {

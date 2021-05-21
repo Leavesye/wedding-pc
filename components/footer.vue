@@ -153,23 +153,29 @@
   font-size: 12px;
   width: 1110px;
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 .tags li {
   margin-right: 20px;
+  color: #4a4a4a;
 }
 .f-link {
   display: flex;
   width: 1110px;
   font-size: 12px;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 30px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 10px;
+  color: #4a4a4a;
 }
 .f-link ul {
   list-style-type: none;
   display: flex;
 }
-
+.f-link ul li {
+  margin-right: 20px;
+}
 </style>
 <template>
   <div class="footer">
@@ -251,15 +257,15 @@
         </div>
       </div>
     </div>
+    <div class="f-link">
+      <div style="margin-right: 10px;">友情链接：</div>
+      <ul>
+        <li v-for="(item, i) in flinks" :key="i"><a style="color:#4a4a4a" :href="item.link" :alt="item.alt">{{item.text}}</a></li>
+      </ul>
+    </div>
     <ul class="tags">
       <li v-for="(item, i) in tags" :key="i">{{item}}</li>
     </ul>
-    <!-- <div class="f-link">
-      <div>友情链接：</div>
-      <ul>
-        <li v-for="(item, i) in flinks" :key="i"><a style="color:#4a4a4a" :href="item.link" :alt="item.alt">{{item.text}}{{ i == flinks.length-1 ? "" :'•'}} </a></li>
-      </ul>
-    </div> -->
     <div class="file">
       <div>
         <a href="https://beian.miit.gov.cn" target="icp" rel="nofollow">沪ICP备18041883号-1</a>  © 2020 Watabe Wedding Corporation. All Rights
@@ -282,6 +288,7 @@ export default {
   },
   computed: {
     flinks: function() {
+      console.log(this.$store.state, 'fdfd')
       return this.$store.state.links
     }
   },
